@@ -1,0 +1,29 @@
+#!/bin/bash
+
+## this file is used to demonstrate the capabilities of the connect4 AI
+## the seeds used in the 3 games will lead to a player1 (smartAI) victory
+## over player 2 (LearnedAI) if the LearnedAI has no historical data to access
+
+
+## uncomment next line (+ bottom line) to check performance with no learning data
+#mv player2LosingMoveSeqs.txt TEMPSTORE_player2losedata
+
+echo
+
+# with no data, winner: 1
+echo -n "Match #1:"
+./connect4 234129923
+echo
+
+# with no data, winner: 0
+echo -n "Match #2:"
+./connect4 213156 #43413
+echo
+
+# with no data, winner: 0
+echo -n "Match #3:"
+./connect4 2344449999
+echo
+
+## uncomment next line (+ top line) to check performance with no learning data
+#mv TEMPSTORE_player2losedata player2LosingMoveSeqs.txt

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## this file is used to generate a large amount of learned data for
+## the LearnedPlayer (must be player 2). Can be interupted at any time
+## and all data generated up to that point will be saved
+
+MAXCOUNT=100000
+count=1
+
+echo
+while [ "$count" -le $MAXCOUNT ]
+do
+  number=$RANDOM
+  ./connect4 $number
+  echo "count at $count"
+  let "count+=1"
+done
